@@ -1,6 +1,8 @@
 class CharactersController < ApplicationController
     def index
         @characters = Character.all
+        @characters = @characters.where("name LIKE ?", "%#{params[:search]}%") if params[:search].present?
+
     end
 
     def new

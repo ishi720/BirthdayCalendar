@@ -1,5 +1,10 @@
 <h1>キャラクター一覧</h1>
 
+<%= form_tag(characters_path, method: "get") do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "検索" %>
+<% end %>
+
 <div>
     <%= link_to "新規追加", new_character_path =%>
 </div>

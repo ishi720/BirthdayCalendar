@@ -1,5 +1,9 @@
 <h1>キャラクター一覧</h1>
 
+<div>
+    <%= link_to "新規追加", new_character_path =%>
+</div>
+
 <ul>
     <% @characters.each do |character| %>
         <li>

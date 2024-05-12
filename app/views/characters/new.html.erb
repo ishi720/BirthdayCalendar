@@ -1,5 +1,9 @@
 <h1>キャラクターの追加</h1>
 
+<div>
+    <%= link_to "戻る", characters_path =%>
+</div>
+
 <%= form_with model: @character do |form| %>
     <div>
         <%= form.label :name, "名前:" %>

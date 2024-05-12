@@ -1,0 +1,35 @@
+<h1>キャラクターの編集</h1>
+
+<div>
+    <%= link_to "戻る", characters_path =%>
+</div>
+
+<%= form_with model: @character do |form| %>
+    <div>
+        <%= form.label :name, "名前:" %>
+        <%= form.text_field :name %>
+    </div>
+    <div>
+        <%= form.label :nickname, "呼び名:" %>
+        <%= form.text_field :nickname %>
+    </div>
+    <div>
+        <%= form.label :birthday, "誕生日:" %>
+        <%= form.text_field :birthday %>
+    </div>
+    <div>
+        <%= form.label :tag, "タグ:" %>
+        <%= form.text_field :tag %>
+    </div>
+    <div>
+        <%= form.label :icon_image, "アイコン:" %>
+        <%= form.text_field :icon_image %>
+    </div>
+    <div>
+        <%= form.label :description, "説明:" %>
+        <%= form.text_field :description %>
+    </div>
+    <div>
+        <%= form.submit "更新" %>
+    </div>
+<% end %>

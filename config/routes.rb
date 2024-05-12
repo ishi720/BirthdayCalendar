@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :characters, only: [:index, :new, :create]
+  resources :characters, only: [:index, :new, :create, :edit, :update, :destroy]
   # rails generate controller Characters
 end

@@ -11,14 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_05_12_100025) do
-  create_table "blogs", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.datetime "start_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "nickname"
@@ -26,15 +18,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_12_100025) do
     t.string "tag"
     t.string "icon_image"
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.string "name"
-    t.text "explanation"
-    t.date "birthday"
-    t.text "tags"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :characters, only: [:index, :new, :create, :edit, :update, :destroy]
   # rails generate controller Characters
+
+    # Calendar routes
+    get 'calendar/index'
+    root 'calendar#index'
 end

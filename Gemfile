@@ -66,6 +66,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
+gem 'sassc'
 gem 'simple_calendar', '~> 2.0'
 
 gem 'kaminari'

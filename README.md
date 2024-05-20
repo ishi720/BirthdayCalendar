@@ -1,24 +1,30 @@
-# README
+# BirthdayCalendar
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
 
-Things you may want to cover:
+キャラクターの誕生日をカレンダーに登録します
 
-* Ruby version
+## 環境
 
-* System dependencies
+```
+$ ruby -v
+ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x64-mingw-ucrt]
 
-* Configuration
+$ rails -v
+Rails 7.1.3.2
+```
 
-* Database creation
+## セットアップ
 
-* Database initialization
+```bash
+# パッケージインストール
+$ bundle install
 
-* How to run the test suite
+# DBマイグレート
+$ rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+# 起動
+$ rails s
+```
 
-* Deployment instructions
 
-* ...

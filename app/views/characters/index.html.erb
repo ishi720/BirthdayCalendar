@@ -1,5 +1,9 @@
 <h1>キャラクター一覧</h1>
 
+<div>
+    <%= link_to "カレンダーへ", root_path =%>
+</div>
+
 <%= form_tag(characters_path, method: "get") do %>
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "検索" %>

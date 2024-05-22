@@ -12,7 +12,13 @@
 <ul>
     <% @characters.each do |character| %>
         <li>
-            <h2><%= character.name %></h2>
+            <div><%= character.name %></div>
+
+            <div>
+                誕生日：
+                <span><%= character.month %></span><span>月<span>
+                <span><%= character.day %></span><span>日<span>
+            </div>
         </li>
         <div>
             <%= link_to "編集", edit_character_path(character) %>

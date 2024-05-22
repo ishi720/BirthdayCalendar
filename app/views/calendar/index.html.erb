@@ -2,4 +2,11 @@
 
 <%= month_calendar do |date| %>
   <%= date.day %>
+
+  <%# 誕生日のキャラクター名を表示 %>
+  <% @characters.each do |character| %>
+    <% if character.month == date.month && character.day == date.day %>
+      <div><%= character.name %></div>
+    <% end %>
+  <% end %>
 <% end %>

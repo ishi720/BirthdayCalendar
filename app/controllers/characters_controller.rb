@@ -44,7 +44,8 @@ class CharactersController < ApplicationController
         params.require(:character).permit(
             :name,
             :nickname,
-            :birthday,
+            :month,
+            :day,
             :tag,
             :icon_image,
             :description

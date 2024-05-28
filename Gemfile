@@ -71,3 +71,8 @@ gem 'simple_calendar', '~> 2.0'
 
 gem 'kaminari'
 gem 'rails-i18n'
+
+gem 'rubocop', require: false
+gem 'rubocop-rails', require: false
+gem 'rubocop-performance', require: false
+gem 'rubocop-rspec', require: false

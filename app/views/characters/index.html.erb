@@ -25,7 +25,7 @@
             </div>
         </li>
         <div>
-            <%= link_to "編集", edit_character_path(character) %>
+            <%= link_to "編集", edit_character_path(character), class: "ui primary button" %>
             <%= button_to "削除", character_path(character), method: :delete %>
         </div>
     <% end %>

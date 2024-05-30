@@ -13,22 +13,21 @@
     <%= link_to "新規追加", new_character_path =%>
 </div>
 
-<ul>
+<div class="ui cards">
     <% @characters.each do |character| %>
-        <li>
+        <div class="ui card">
             <div><%= character.name %></div>
-
             <div>
                 誕生日：
                 <span><%= character.month %></span><span>月<span>
                 <span><%= character.day %></span><span>日<span>
             </div>
-        </li>
-        <div>
-            <%= link_to "編集", edit_character_path(character), class: "ui primary button" %>
-            <%= button_to "削除", character_path(character), method: :delete %>
+            <div class="button-container">
+                <%= link_to "編集", edit_character_path(character), class: "ui primary button" %>
+                <%= button_to "削除", character_path(character), method: :delete, class: "ui button" %>
+            </div>
         </div>
     <% end %>
-</ul>
+</div>
 
 <%= paginate @characters %>

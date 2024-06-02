@@ -4,6 +4,17 @@
     <%= link_to "戻る", characters_path, class: "ui primary button" %>
 </div>
 
+<% if @character.errors.any? %>
+    <div class="ui error message">
+        <div class="header">次の項目を確認してください:</div>
+        <ul class="list">
+            <% @character.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
 
 <%= form_with model: @character, class: "ui form" do |form| %>
     <div class="field">
@@ -11,7 +22,7 @@
         <%= form.text_field :name %>
     </div>
     <div class="field">
-        <%= form.label :nickname, "呼び名:", class: "ui label" %>
+        <%= form.label :nickname, "ニックネーム:", class: "ui label" %>
         <%= form.text_field :nickname %>
     </div>
     <div class="two fields">

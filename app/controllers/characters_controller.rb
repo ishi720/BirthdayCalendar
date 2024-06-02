@@ -6,7 +6,7 @@ class CharactersController < ApplicationController
             search: "%#{params[:search]}%"
         )
         @characters = @characters.order(:month, :day)
-        @characters = @characters.page(params[:page]).per(10)
+        @characters = @characters.page(params[:page]).per(12)
     end
 
     def new

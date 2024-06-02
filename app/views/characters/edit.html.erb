@@ -1,37 +1,42 @@
-<h1>キャラクターの編集</h1>
+<h1 class="ui header">キャラクターの編集</h1>
 
 <div>
-    <%= link_to "戻る", characters_path =%>
+    <%= link_to "戻る", characters_path, class: "ui primary button" %>
 </div>
 
-<%= form_with model: @character do |form| %>
-    <div>
-        <%= form.label :name, "名前:" %>
+
+<%= form_with model: @character, class: "ui form" do |form| %>
+    <div class="field">
+        <%= form.label :name, "名前:", class: "ui label" %>
         <%= form.text_field :name %>
     </div>
-    <div>
-        <%= form.label :nickname, "呼び名:" %>
+    <div class="field">
+        <%= form.label :nickname, "呼び名:", class: "ui label" %>
         <%= form.text_field :nickname %>
     </div>
-    <div>
-        <%= form.label :month, "月:" %>
-        <%= form.text_field :month %>
-        <%= form.label :day, "日:" %>
-        <%= form.text_field :day %>
+    <div class="two fields">
+        <div class="field">
+            <%= form.label :month, "月:", class: "ui label" %>
+            <%= form.text_field :month %>
+        </div>
+        <div class="field">
+            <%= form.label :day, "日:", class: "ui label" %>
+            <%= form.text_field :day %>
+        </div>
     </div>
-    <div>
-        <%= form.label :tag, "タグ:" %>
+    <div class="field">
+        <%= form.label :tag, "タグ:", class: "ui label" %>
         <%= form.text_field :tag %>
     </div>
-    <div>
-        <%= form.label :icon_image, "アイコン:" %>
+    <div class="field">
+        <%= form.label :icon_image, "アイコン:", class: "ui label" %>
         <%= form.text_field :icon_image %>
     </div>
-    <div>
-        <%= form.label :description, "説明:" %>
+    <div class="field">
+        <%= form.label :description, "説明:", class: "ui label" %>
         <%= form.text_field :description %>
     </div>
-    <div>
-        <%= form.submit "更新" %>
+    <div class="field">
+        <%= form.submit "更新", class: "ui button primary" %>
     </div>
 <% end %>

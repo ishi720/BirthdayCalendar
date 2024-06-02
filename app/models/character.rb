@@ -15,7 +15,7 @@ class Character < ApplicationRecord
   validates :tag, length: { maximum: 100 }, allow_blank: true
 
   # アイコン画像
-  validates :icon_image, format: { with: URI::regexp(%w[http https]), message: "must be a valid URL" }, allow_blank: true
+  validates :icon_image, format: { with: URI.regexp(%w[http https]), message: "must be a valid URL" }, allow_blank: true
 
   # 説明文
   validates :description, length: { maximum: 500 }, allow_blank: true

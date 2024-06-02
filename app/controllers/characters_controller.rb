@@ -1,7 +1,10 @@
 class CharactersController < ApplicationController
     def index
         @characters = Character.all
-        @characters = @characters.where("name LIKE ?", "%#{params[:search]}%") if params[:search].present?
+        @characters = @characters.where(
+            "name LIKE :search OR tag LIKE :search OR nickname LIKE :search",
+            search: "%#{params[:search]}%"
+        )
         @characters = @characters.order(:month, :day)
         @characters = @characters.page(params[:page]).per(10)
     end

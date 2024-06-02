@@ -1,9 +1,5 @@
 <h1 class="ui header">キャラクターの追加</h1>
 
-<div>
-    <%= link_to "戻る", characters_path, class: "ui primary button" %>
-</div>
-
 <% if @character.errors.any? %>
     <div class="ui error message">
         <div class="header">次の項目を確認してください:</div>
@@ -48,6 +44,7 @@
     </div>
     <div class="field">
         <%= form.submit "登録", class: "ui button primary" %>
+        <%= link_to "戻る", characters_path, class: "ui primary button" %>
     </div>
 
 <% end %>

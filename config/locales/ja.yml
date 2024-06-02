@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        character:
+          attributes:
+            icon_image:
+              invalid_url: "有効な URL である必要があります"
+

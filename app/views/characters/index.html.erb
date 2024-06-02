@@ -10,7 +10,9 @@
 <% end %>
 
 <div>
-    <%= link_to "新規追加", new_character_path, class: "ui button primary" =%>
+    <%= link_to new_character_path, class: "ui button primary" do %>
+        <i class="plus icon"></i>新規追加
+    <% end %>
 </div>
 
 <div class="ui cards">
@@ -23,9 +25,19 @@
                 <span><%= character.month %></span><span>月<span>
                 <span><%= character.day %></span><span>日<span>
             </div>
+            <div class="character-tag-area">
+                <% if character.tag.present? %>
+                    <span class="character-tag"><%= character.tag %></span>
+                <% end %>
+            </div>
+
             <div class="button-container">
-                <%= link_to "編集", edit_character_path(character), class: "ui primary button" %>
-                <%= button_to "削除", character_path(character), method: :delete, class: "ui button" %>
+                <%= link_to edit_character_path(character), class: "ui primary button" do %>
+                    <i class="edit icon"></i>編集
+                <% end %>
+                <%= button_to character_path(character), method: :delete, class: "ui button" do %>
+                    <i class="trash icon"></i>削除
+                <% end %>
             </div>
         </div>
     <% end %>

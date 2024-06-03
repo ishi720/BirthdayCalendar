@@ -23,11 +23,11 @@
     <div class="two fields">
         <div class="field">
             <%= form.label :month, "月:", class: "ui label" %>
-            <%= form.text_field :month %>
+            <%= form.select :month, options_for_select((1..12).to_a), { include_blank: true } %>
         </div>
         <div class="field">
             <%= form.label :day, "日:", class: "ui label" %>
-            <%= form.text_field :day %>
+            <%= form.select :day, options_for_select((1..12).to_a), { include_blank: true } %>
         </div>
     </div>
     <div class="field">

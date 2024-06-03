@@ -1,4 +1,4 @@
-<h1>キャラクター一覧</h1>
+<h1 class="ui header">キャラクター一覧</h1>
 
 <div>
     <%= link_to "カレンダーへ", root_path =%>
@@ -13,6 +13,10 @@
     <%= link_to new_character_path, class: "ui button primary" do %>
         <i class="plus icon"></i>新規登録
     <% end %>
+</div>
+
+<div style="text-aline: center;">
+    <%= paginate @characters %>
 </div>
 
 <div class="ui cards">
@@ -43,4 +47,3 @@
     <% end %>
 </div>
 
-<%= paginate @characters %>

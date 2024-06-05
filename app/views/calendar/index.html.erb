@@ -1,8 +1,12 @@
 <h1 class="ui header">キャラクターカレンダー</h1>
 
 <div class="ui buttons" style="padding-bottom: 10px;">
-  <%= link_to "カレンダー", root_path, class: "ui button primary" =%>
-  <%= link_to "一覧", characters_path, class: "ui button" =%>
+  <%= link_to root_path, class: "ui button primary" do %>
+    <i class="calendar icon"></i> カレンダー
+  <% end %>
+  <%= link_to characters_path, class: "ui button" do %>
+    <i class="list icon"></i> リスト
+  <% end %>
 </div>
 
 <%= month_calendar do |date| %>

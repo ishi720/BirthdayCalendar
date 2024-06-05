@@ -7,3 +7,7 @@ ja:
             icon_image:
               invalid_url: "有効な URL である必要があります"
 
+  # カレンダー
+  simple_calendar:
+    previous: 前月
+    next: 次月

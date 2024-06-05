@@ -1,21 +1,27 @@
 <h1 class="ui header">キャラクター一覧</h1>
 
-<div>
+<div style="padding-bottom: 10px;">
     <%= link_to "カレンダーへ", root_path =%>
 </div>
 
-<%= form_tag(characters_path, method: "get") do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "検索" %>
-<% end %>
+<div class="ui grid" style="padding-bottom: 10px;">
+  <div class="eight wide column">
+    <%= form_tag(characters_path, method: "get", class: "ui form") do %>
+      <div class="ui action input">
+        <%= text_field_tag :search, params[:search], placeholder: "キーワードを指定" %>
+        <button type="submit" class="ui icon button primary"><i class="search icon"></i></button>
+      </div>
+    <% end %>
+  </div>
 
-<div>
+  <div class="eight wide column" style="text-align: end;">
     <%= link_to new_character_path, class: "ui button primary" do %>
         <i class="plus icon"></i>新規登録
     <% end %>
+  </div>
 </div>
 
-<div style="text-aline: center;">
+<div style="text-align: center; padding-bottom: 10px;">
     <%= paginate @characters %>
 </div>
 

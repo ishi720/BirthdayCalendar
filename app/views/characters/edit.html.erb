@@ -28,7 +28,7 @@
         </div>
         <div class="field">
             <%= form.label :day, "日", class: "ui label" %>
-            <%= form.select :month, options_for_select((1..31).to_a, selected: @character.day) %>
+            <%= form.select :day, options_for_select((1..31).to_a, selected: @character.day) %>
         </div>
     </div>
     <div class="field">

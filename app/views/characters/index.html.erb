@@ -19,11 +19,13 @@
     <% end %>
   </div>
 
-  <div class="eight wide column" style="text-align: end;">
-    <%= link_to new_character_path, class: "ui button primary" do %>
-        <i class="plus icon"></i>新規登録
-    <% end %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="eight wide column" style="text-align: end;">
+      <%= link_to new_character_path, class: "ui button primary" do %>
+          <i class="plus icon"></i>新規登録
+      <% end %>
+    </div>
+  <% end %>
 </div>
 
 <p><%= @start_index %>～<%= @end_index %> 件を表示 ／ 全 <%= @characters_count %> 件</p>
@@ -52,14 +54,16 @@
                   <% end %>
               </div>
 
-              <div class="button-container">
-                  <%= link_to edit_character_path(character), class: "ui primary button" do %>
-                      <i class="edit icon"></i>編集
-                  <% end %>
-                  <%= button_to character_path(character), method: :delete, class: "ui button" do %>
-                      <i class="trash icon"></i>削除
-                  <% end %>
-              </div>
+              <% if user_signed_in? %>
+                <div class="button-container">
+                    <%= link_to edit_character_path(character), class: "ui primary button" do %>
+                        <i class="edit icon"></i>編集
+                    <% end %>
+                    <%= button_to character_path(character), method: :delete, class: "ui button" do %>
+                        <i class="trash icon"></i>削除
+                    <% end %>
+                </div>
+              <% end %>
           </div>
       <% end %>
   </div>

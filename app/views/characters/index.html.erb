@@ -32,31 +32,36 @@
     <%= paginate @characters %>
 </div>
 
-<div class="ui cards">
-    <% @characters.each do |character| %>
-        <div class="ui card character-card">
-            <div class="character-name"><%= character.name %></div>
-            <div class="character-image"></div>
-            <div>
-                誕生日：
-                <span><%= character.month %></span><span>月<span>
-                <span><%= character.day %></span><span>日<span>
-            </div>
-            <div class="character-tag-area">
-                <% if character.tag.present? %>
-                    <span class="character-tag"><%= character.tag %></span>
-                <% end %>
-            </div>
 
-            <div class="button-container">
-                <%= link_to edit_character_path(character), class: "ui primary button" do %>
-                    <i class="edit icon"></i>編集
-                <% end %>
-                <%= button_to character_path(character), method: :delete, class: "ui button" do %>
-                    <i class="trash icon"></i>削除
-                <% end %>
-            </div>
-        </div>
-    <% end %>
-</div>
+<% if @characters_count.zero? %>
+  <div style="text-align: center;">検索条件に一致するキャラクターはいませんでした。<br>検索条件を変えて検索してください</div>
+<% else %>
+  <div class="ui cards">
+      <% @characters.each do |character| %>
+          <div class="ui card character-card">
+              <div class="character-name"><%= character.name %></div>
+              <div class="character-image"></div>
+              <div>
+                  誕生日：
+                  <span><%= character.month %></span><span>月<span>
+                  <span><%= character.day %></span><span>日<span>
+              </div>
+              <div class="character-tag-area">
+                  <% if character.tag.present? %>
+                      <span class="character-tag"><%= character.tag %></span>
+                  <% end %>
+              </div>
+
+              <div class="button-container">
+                  <%= link_to edit_character_path(character), class: "ui primary button" do %>
+                      <i class="edit icon"></i>編集
+                  <% end %>
+                  <%= button_to character_path(character), method: :delete, class: "ui button" do %>
+                      <i class="trash icon"></i>削除
+                  <% end %>
+              </div>
+          </div>
+      <% end %>
+  </div>
+<% end %>
 

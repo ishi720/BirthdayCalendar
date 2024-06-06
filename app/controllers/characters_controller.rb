@@ -5,8 +5,13 @@ class CharactersController < ApplicationController
             "name LIKE :search OR tag LIKE :search OR nickname LIKE :search",
             search: "%#{params[:search]}%"
         )
+        @characters_count = @characters.count
         @characters = @characters.order(:month, :day)
         @characters = @characters.page(params[:page]).per(12)
+
+        @current_page = (params[:page] || 1).to_i
+        @start_index = (@current_page - 1) * 12 + 1
+        @end_index = [@start_index + @characters.size - 1, @characters_count].min
     end
 
     def new

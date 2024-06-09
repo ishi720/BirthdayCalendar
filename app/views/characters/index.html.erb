@@ -1,9 +1,10 @@
 <h1 class="ui header">キャラクター一覧</h1>
 
+<%# ログイン、ログアウト　%>
 <% if user_signed_in? %>
-  <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "ui button" %>
+  <%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "ui button" %>
 <% else %>
-  <%= link_to 'Login', new_user_session_path, class: "ui button" %>
+  <%= link_to 'ログイン', new_user_session_path, class: "ui button" %>
 <% end %>
 
 

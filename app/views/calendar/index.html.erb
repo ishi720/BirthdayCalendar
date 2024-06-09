@@ -1,7 +1,15 @@
 <h1 class="ui header">キャラクターカレンダー</h1>
 
+<%# ログイン、ログアウト　%>
+<% if user_signed_in? %>
+  <%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "ui button" %>
+<% else %>
+  <%= link_to 'ログイン', new_user_session_path, class: "ui button" %>
+<% end %>
+
+
 <div class="ui buttons" style="padding-bottom: 10px;">
-  <%= link_to root_path, class: "ui button primary" do %>
+  <%= link_to calendar_index_path, class: "ui button primary" do %>
     <i class="calendar icon"></i> カレンダー
   <% end %>
   <%= link_to characters_path, class: "ui button" do %>

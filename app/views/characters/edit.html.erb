@@ -15,7 +15,7 @@
 <%= form_with model: @character, class: "ui form" do |form| %>
     <div class="field">
         <%= form.label :name, "名前", class: "ui label" %>
-        <%= form.text_field :name %>
+        <%= form.text_field :name, required: true %>
     </div>
     <div class="field">
         <%= form.label :nickname, "ニックネーム", class: "ui label" %>

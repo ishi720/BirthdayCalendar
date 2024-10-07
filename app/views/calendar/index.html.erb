@@ -2,7 +2,7 @@
 
 <%# ログイン、ログアウト　%>
 <% if user_signed_in? %>
-  <%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "ui button" %>
+  <%= button_to 'ログアウト', destroy_user_session_path, form: { style: "display: inline;" }, method: :delete, class: "ui button" %>
 <% else %>
   <%= link_to 'ログイン', new_user_session_path, class: "ui button" %>
 <% end %>

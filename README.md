@@ -11,7 +11,7 @@ $ ruby -v
 ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x64-mingw-ucrt]
 
 $ rails -v
-Rails 7.1.3.2
+Rails 8.1.4
 ```
 
 ## セットアップ

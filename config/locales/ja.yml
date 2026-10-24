@@ -10,4 +10,5 @@ ja:
   # カレンダー
   simple_calendar:
     previous: 前月
+    today: 今月
     next: 次月

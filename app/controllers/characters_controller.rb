@@ -21,7 +21,7 @@ class CharactersController < ApplicationController
     end
 
     def edit
-        @character = Character.find(params[:id])
+        @character = Character.find(params.expect(:id))
     end
 
     def create
@@ -35,7 +35,7 @@ class CharactersController < ApplicationController
     end
 
     def update
-        @character = Character.find(params[:id])
+        @character = Character.find(params.expect(:id))
         if @character.update(character_params)
             redirect_to characters_path
         else
@@ -44,7 +44,7 @@ class CharactersController < ApplicationController
     end
 
     def destroy
-        @character = Character.find(params[:id])
+        @character = Character.find(params.expect(:id))
         @character.destroy
         redirect_to characters_path
     end
@@ -52,14 +52,6 @@ class CharactersController < ApplicationController
     private
 
     def character_params
-        params.require(:character).permit(
-            :name,
-            :nickname,
-            :month,
-            :day,
-            :tag,
-            :icon_image,
-            :description
-        )
+        params.expect(character: %i[name nickname month day tag icon_image description])
     end
 end

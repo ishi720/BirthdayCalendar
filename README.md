@@ -6,6 +6,24 @@
 
 キャラクターの誕生日をカレンダーに登録します
 
+## 技術スタック
+
+| 分類 | 使用技術 |
+|---|---|
+| 言語 | Ruby 3.2 |
+| フレームワーク | Ruby on Rails 8.1 |
+| データベース | SQLite |
+| Web サーバー | Puma |
+| 認証 | Devise |
+| カレンダー表示 | simple_calendar |
+| ページネーション | Kaminari |
+| 日本語化 | rails-i18n |
+| フロントエンド | Hotwire , Importmap |
+| CSS | Semantic UI , Sass , Sprockets |
+| テスト | Minitest, Capybara, Selenium |
+| 静的解析 | RuboCop |
+| CI | GitHub Actions (RuboCop) |
+
 ## 環境
 
 ```

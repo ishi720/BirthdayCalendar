@@ -60,4 +60,26 @@ $ rails test test/controllers/calendar_controller_test.rb
 $ bundle exec rubocop
 ```
 
+## パッケージの更新
+
+```bash
+# 更新可能なgemを確認
+$ bundle outdated
+
+# Gemfileに直接記載したgemのみ確認
+$ bundle outdated --only-explicit
+
+# 特定のgemを更新
+$ bundle update <gem名>
+
+# Gemfileのバージョン指定の範囲内ですべてのgemを更新
+$ bundle update
+
+# パッチバージョンのみ更新
+$ bundle update --patch
+
+# Bundler自体を更新
+$ bundle update --bundler
+```
+
 

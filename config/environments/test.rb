@@ -50,4 +50,9 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions.
   config.action_controller.raise_on_missing_callback_actions = true
+
+  # アセットのファイルキャッシュ書き込み (rename) が初回に失敗することがあるため、メモリキャッシュを使う
+  config.assets.configure do |env|
+    env.cache = Sprockets::Cache::MemoryStore.new
+  end
 end

@@ -29,4 +29,17 @@ $ rails db:migrate
 $ rails s
 ```
 
+## テスト
+
+```bash
+# テスト実行
+$ rails test
+
+# ファイルを指定して実行
+$ rails test test/controllers/calendar_controller_test.rb
+
+# RuboCop
+$ bundle exec rubocop
+```
+
 

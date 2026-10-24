@@ -3,15 +3,17 @@
 one:
   name: MyString
   nickname: MyString
-  birthday: 2024-05-12
+  month: 5
+  day: 12
   tag: MyString
-  icon_image: MyString
+  icon_image: https://example.com/one.png
   description: MyText
 
 two:
   name: MyString
   nickname: MyString
-  birthday: 2024-05-12
+  month: 12
+  day: 31
   tag: MyString
-  icon_image: MyString
+  icon_image: https://example.com/two.png
   description: MyText
